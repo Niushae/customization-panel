@@ -47,7 +47,7 @@ export const useThemeStore = defineStore('theme', {
       return {
         '--color-bg-global': state.globalBackground,
         '--color-text-global': state.globalText,
-        '--section-color': state.sectionColor,
+        '--color-section': state.sectionColor,
       };
     },
   },
