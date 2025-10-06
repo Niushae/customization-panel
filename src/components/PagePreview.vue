@@ -4,13 +4,9 @@ import PageView from '@/views/PageView.vue'
 
 <template>
   <div
-    class="relative overflow-hidden border-2 border-indigo-300 rounded-lg shadow-xl bg-white"
-    style="height: 300px"
+    class="relative overflow-hidden border-2 border-indigo-300 rounded-lg shadow-xl bg-white max-w-lg h-96 mx-auto"
   >
-    <div
-      class="absolute origin-top-left"
-      style="transform: scale(0.3); width: 1000px; height: 1000px; pointer-events: none"
-    >
+    <div class="absolute origin-top-left pointer-events-none w-[1000px] h-[1000px] scale-50">
       <PageView />
     </div>
   </div>

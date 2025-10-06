@@ -19,7 +19,7 @@ const handleChange = (event: Event) => {
       type="color"
       :value="props.modelValue"
       @input="handleChange"
-      class="w-1/2 h-8 rounded-md border-gray-300 shadow-sm cursor-pointer"
+      class="w-16 h-8 rounded-md border-gray-300 shadow-sm cursor-pointer"
       title="Select color"
     />
   </div>
