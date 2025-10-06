@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useThemeStore } from '@/stores/theme'
-import NavbarComponent from '@/components/NavbarComponent.vue'
-import FooterComponent from '@/components/FooterComponent.vue'
 
 const themeStore = useThemeStore()
 const layoutStyles = computed(() => themeStore.cssVariables)
@@ -10,8 +8,6 @@ const layoutStyles = computed(() => themeStore.cssVariables)
 
 <template>
   <div class="flex flex-col min-h-screen p-8 transition-colors duration-300" :style="layoutStyles">
-    <NavbarComponent />
-
     <header
       class="p-6 mb-8 shadow-md rounded-lg transition-colors duration-300"
       :style="{
@@ -37,14 +33,12 @@ const layoutStyles = computed(() => themeStore.cssVariables)
         Content Section Title (Override Style)
       </h2>
       <p class="text-lg">This text follows the global text color ({{ themeStore.globalText }}).</p>
-      <div class="mt-4 p-4 border rounded" :style="{ borderColor: 'var(--color-content-title)' }">
+      <section class="mt-4 p-4 border rounded" :style="{ backgroundColor: 'var(--color-section)' }">
         <p>
-          The border of this box and the H2 above demonstrate the specific override style (Content
-          Title Color), which is independent of the global text color.
+          This background color demonstrate the specific override style (Background Color), which is
+          independent of the global text color.
         </p>
-      </div>
+      </section>
     </main>
-
-    <FooterComponent />
   </div>
 </template>
